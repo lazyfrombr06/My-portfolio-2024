@@ -1,0 +1,71 @@
+/* Phone */
+@media only screen and (max-width: 600px) {
+    .skills-section-home-container {
+        flex-direction: column;
+    }
+    .each-box-of-skill {
+        width: 86%;
+        margin: 3% auto;
+        padding: 6%;
+    }
+    .project-container-each {
+        flex-direction: column;
+    }
+    .first-box-of-project-for-details, .third-container-of-project-for-mobile-view {
+        width: 90%;
+    }
+    .second-box-of-project-for-desktop-image {
+        width: 90%;
+    }
+    .skills-container {
+        flex-direction: column;
+    }
+    .skill {
+        width: 90%;
+        margin: 3% auto;
+    }
+    .contact {
+        width: 76%;
+        margin: auto;
+    }
+    .social-icons-container {   
+        bottom: 5%;
+    }
+    .about-me-and-right-reserve {
+        flex-direction: column;
+    }
+    .aboutme-container {
+        width: 90%;
+        padding: 2%;
+        margin: auto;
+    }
+    .all-right-reserve-container {
+        width: 90%;
+        margin: auto;
+    }
+    .all-right-reserve-heading {
+        font-size: 1.2rem;
+        color: #8b8b8b;
+    }
+    .about-me-text {
+        width: 90%;
+    }
+    .wrapper .btn {
+        width: 40%;
+        height: 37px;
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        padding: 10px 0px;
+        width: 47%;
+    }
+    .navbar ul li {
+        margin: 0 17px;
+       
+    }
+    .about-me-image-container {
+        width: 50%;
+        margin: auto;
+    }
+}
