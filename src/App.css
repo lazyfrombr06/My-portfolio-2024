@@ -1,4 +1,13 @@
 /* General body styling */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+   font-family: "Courier Prime", monospace;
+}
+h1,h2,h3,h4,h5{
+  font-family: "Montserrat", sans-serif;
+}
 body {
   margin: 0;
   padding: 0;
@@ -66,24 +75,56 @@ body.is-loading::after {
   display: flex;
 }
 
+.logo-container-brajesh-tech{
+  width: 5.5%;
+  
+}
+.logo-container-brajesh-tech img {
+  width: 90%;
+  padding: 8px 0;
+  padding-left: 27px;
+  border-radius: 15px;
+  /* animation: spin 4s linear infinite; */
+  display: inline-block;
+  margin: auto;
+  animation: fadeIn 4s forwards;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.logo-container-brajesh-tech img:hover {
+
+cursor: pointer;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
- 
   padding: 10px;
+  width: 92%;
   
-  width: 50%;
 }
 .nav-ul-1{
   justify-content: flex-end;
-  animation: swipeFromLeft 1.5s ease forwards;
+  /* animation: swipeFromLeft 1.5s ease forwards; */
+  animation: swipeFromRight 1.5s ease forwards;
 
 }
-.nav-ul-2{
-  justify-content: flex-start;
-  animation: swipeFromRight 1.5s ease forwards; 
 
-}
 .navbar ul li {
   margin: 0 20px;
   /* animation: swipeFromLeft 1s ease forwards; */
@@ -210,10 +251,26 @@ section {
 
 .each-box-of-skill{
   width: 18%;
-  background-color: #083d3deb;
+
   margin:  1%;
   padding: 2%;
+  backdrop-filter: blur(6px);
+  background-color: #083d3d94;
+
+
+
+
+    background: transparent;
+  
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    color: #c1c1c1;
+   
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.9);
+  
 }
+
+
 .each-box-of-skill img{
   width: 60%;
 }
@@ -222,6 +279,7 @@ section {
   font-size: 18px;
   margin-top: 20px;
   line-height: 25px;
+  color: rgb(167, 166, 166);
 }
 
 .home .btn {
@@ -298,7 +356,7 @@ scroll-behavior: smooth; */
 }
 .project-description-text-para {
   /* font-family: 'Arial', sans-serif; */
-  font-family: serif;
+  /* font-family: serif; */
   font-size: 1.2rem;
   line-height: 25px;
   text-align: center;
@@ -409,15 +467,17 @@ scroll-behavior: smooth; */
 
 /* Animations */
 @keyframes fadeInDown {
-  from {
+  0% {
+    transform: translateY(100%);
     opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+
 @keyframes swipeFromLeft {
   20% {
     transform: translateX(-100%); /* Start off-screen to the left */
@@ -429,16 +489,15 @@ scroll-behavior: smooth; */
   }
 }
 @keyframes swipeFromRight {
-  20% {
-    transform: translateX(100%); /* Start off-screen to the right */
+  0% {
+    transform: translateY(-100%) rotateX(90deg); /* Start off-screen and rotate */
     opacity: 0; /* Optional: Start invisible */
   }
   100% {
-    transform: translateX(0); /* Move to the original position */
+    transform: translateY(0) rotateX(0deg); /* Move to the original position, no rotation */
     opacity: 1; /* Optional: Fade in */
   }
 }
-
 
 
 
@@ -682,4 +741,37 @@ flex-direction: column;
   width: 60%;
   justify-content: space-evenly;
 
+}
+
+.admin-login-navlink{
+  color: rgb(80, 80, 80);
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  transition: all .2s ease;
+}
+.admin-login-navlink:hover{
+  color: rgb(216, 216, 216);
+}
+.form-error-msg-span {
+  color: #ff0000;
+  font-style: italic;
+  position: relative;
+  bottom: 36px;
+  left: 171px;
+}
+.admin-login-nav-container-bottom{
+  background: #083939;
+  padding: 4px;
+  text-align: center;
+}
+.admin-login-nav-bottom{
+  text-align: center;
+  font-style: none;
+  color: #000000;
+  text-decoration: none;
+}
+.admin-login-nav-bottom:hover{
+  color: #6b6b6b;
 }

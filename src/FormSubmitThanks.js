@@ -1,11 +1,11 @@
 import React from 'react';
 
-const PageNotFound = () => {
+const FormSubmitThanks = () => {
     return (
         <div style={styles.container}>
             <div style={styles.card}>
-                <h1 style={styles.title}>404!</h1>
-                <p style={styles.message}>Page Not Found</p>
+                <h1 style={styles.title}>Thank You!</h1>
+                <p style={styles.message}>We have received your submission and will get back to you shortly.</p>
                 <a href="/" style={styles.button}>Go Back to Home</a>
             </div>
         </div>
@@ -21,8 +21,8 @@ const styles = {
         backgroundColor: '#083d3deb' // Adjust to match your theme background
     },
     card: {
-      width:'70%',
-      margin:'auto',
+        width:'70%',
+        margin:'auto',
         padding: '40px',
         textAlign: 'center',
         backgroundColor: '#fff',
@@ -62,4 +62,4 @@ const styles = {
     },
 };
 
-export default PageNotFound;
+export default FormSubmitThanks;

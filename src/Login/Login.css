@@ -1,0 +1,102 @@
+.login-component{
+    min-height: 100vh;
+    margin: auto;
+    max-width: 100%;
+}
+.welcome-msg-in-log-in-page{
+    margin-top: 5%;
+    color: rgb(89, 80, 80);
+    text-align: center;
+    font-style: italic;
+}
+.login-heading{
+    text-align: center;
+    color: rgb(180, 180, 180);
+    margin-top: 0%;
+}
+
+.input-box-container-login{
+  
+    width: 50%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    color: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.9);
+ display: flex;
+ margin: 3% auto;
+ flex-direction: column;
+
+}
+.input-box-of-login-page {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    padding: 3px 12px;
+    width: 66%;
+    margin: 0 auto;
+    margin-top: 3%;
+    color: #09bdb4;
+    letter-spacing: 3px;
+   
+}
+
+.submit-btn-of-login{
+    margin: 4% auto;
+    min-width: 25%;
+    padding: 4px;
+    background: transparent;
+    color: #0cb3ac;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(87, 86, 86, 0.2);
+    font-weight: bold;
+}
+.submit-btn-of-login:hover{
+    margin: 4% auto;
+    min-width: 25%;
+    padding: 4px;
+    background: #0cb3ac;
+    color: white;
+}
+
+.link-to-go-to-home-login-page {
+    color: rgb(123, 123, 123);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 49px auto;
+    transition: all .3s ease;
+}
+.link-to-go-to-home-login-page:hover {
+    color: rgb(255, 255, 255);
+   
+}
+.inp-box-container-login-each{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+}
+.show-hide-password {
+    position: relative;
+    background: none;
+    color: rgb(112, 112, 112);
+    border: none;
+    outline: none;
+    top: 11px;
+    right: 107px;
+}
+.show-hide-password:hover {
+    cursor: pointer;
+    color: white;
+
+}
+.inp-box-container-login-each-2{
+    position: relative;
+    left: 13px;
+}
