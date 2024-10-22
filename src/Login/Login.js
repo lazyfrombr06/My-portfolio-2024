@@ -8,6 +8,9 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+  // this is show incorrect detais when some one try to login only frontend
+const [incorrect, setIncorrect]= useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,25 +21,30 @@ const Login = () => {
   }, []);
 
   // API
-  const handleLogin = async () => {
-    console.warn(userName, password);
-    let result = await fetch("http://brajesh.tech/login", {
-      method: "POST",
-      body: JSON.stringify({ userName, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
 
-    result = await result.json();
-    console.warn(result);
-    if (result.name) {
-      localStorage.setItem("user", JSON.stringify(result));
-      navigate("/admin");
-    } else {
-      alert("encorrct details");
-    }
-  };
+  // const handleLogin = async () => {
+  //   console.warn(userName, password);
+  //   let result = await fetch("http://brajesh.tech/login", {
+  //     method: "POST",
+  //     body: JSON.stringify({ userName, password }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+
+  //   result = await result.json();
+  //   console.warn(result);
+  //   if (result.name) {
+  //     localStorage.setItem("user", JSON.stringify(result));
+  //     navigate("/admin");
+  //   } else {
+  //     alert("encorrct details");
+  //   }
+  // };
+
+
+
+
 
   // check Field data in console
   const collectData = () => {
@@ -76,9 +84,14 @@ const Login = () => {
         </button>
 
         </div>
+
+      <div className={incorrect?"incorrect-detais-false":"incorrect-detais-true" }>
+       Incorrect username and password
+      </div>
         <button
           className="submit-btn-of-login"
-          onClick={handleLogin}
+          // onClick={handleLogin}
+          onClick={() => setIncorrect(!incorrect)}
           type="button"
         >
           Log In

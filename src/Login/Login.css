@@ -100,3 +100,14 @@
     position: relative;
     left: 13px;
 }
+.incorrect-detais-false, .incorrect-detais-true{
+    color: red;
+    margin: 2% auto;
+}
+.incorrect-detais-true{
+    display: none;
+
+}
+.incorrect-detais-false{
+    display: initial;
+}

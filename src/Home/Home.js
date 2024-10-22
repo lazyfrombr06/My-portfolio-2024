@@ -510,8 +510,8 @@ function Home() {
                 )}
               </div>
 
-              <input type="hidden" name="_next" value="https://brajesh.tech/thanks-form-submit-page"></input>
-              {/* <input type="hidden" name="_captcha" value="false"></input> */}
+              <input type="hidden" name="_next" value="https://brajesh.tech/thanks-form-submit-page" />
+              <input type="hidden" name="_captcha" value="false"/>
               {/* <input
                 type="hidden"
                 name="_next"

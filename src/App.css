@@ -26,7 +26,7 @@ body::before {
   width: 100vw;
   height: 100vh;
   z-index: -2; /* Ensure it is behind the body content */
-  background-image: url("./Media/bg2.png");
+  /* background-image: url("./Media/bg2.png"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -769,9 +769,9 @@ flex-direction: column;
 .admin-login-nav-bottom{
   text-align: center;
   font-style: none;
-  color: #000000;
+  color: #6b6b6b;
   text-decoration: none;
 }
 .admin-login-nav-bottom:hover{
-  color: #6b6b6b;
+  color: #f04242;
 }
