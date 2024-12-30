@@ -4,6 +4,7 @@
 
 *{
    font-family: "Courier Prime", monospace;
+   overflow-x: hidden;
 }
 h1,h2,h3,h4,h5{
   font-family: "Montserrat", sans-serif;
@@ -76,11 +77,11 @@ body.is-loading::after {
 }
 
 .logo-container-brajesh-tech{
-  width: 5.5%;
+  width: 7.7%;
   
 }
 .logo-container-brajesh-tech img {
-  width: 90%;
+  width: 62%;
   padding: 8px 0;
   padding-left: 27px;
   border-radius: 15px;
@@ -115,7 +116,7 @@ cursor: pointer;
   list-style: none;
   display: flex;
   padding: 10px;
-  width: 92%;
+  width: 87%;
   
 }
 .nav-ul-1{
@@ -307,8 +308,8 @@ section {
   display: flex;
   width: 97%;
   margin:5% auto;
-  background-color: #f0f8ff;
-  background-color: #083d3deb;
+  /* background-color: #f0f8ff;
+  background-color: #083d3deb; */
   color: #f0f8ff;
   /* height: 50vh;
 overflow: scroll;
@@ -775,3 +776,56 @@ flex-direction: column;
 .admin-login-nav-bottom:hover{
   color: #f04242;
 }
+
+.feature-box {
+  transition: transform 1.2s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(50%); /* Start sliding from 50% to make it smoother */
+  will-change: transform, opacity; /* Optimize performance */
+  
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slides in smoothly */
+}
+.feature-box-left {
+  transition: transform 1.1s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(-30%); /* Slide in from the left side */
+  will-change: transform, opacity;
+}
+
+.slide-in-left {
+  opacity: 1;
+  transform: translateX(0); /* Slides in smoothly */
+
+}
+
+
+.feature-box-fade-in {
+  transition: transform 1.1s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0.1; /* Start with 30% opacity */
+  transform: translateY(10px); /* Start with a slight downward position */
+  will-change: transform, opacity;
+
+}
+
+.fade-in-up {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move up 5px */
+}
+
+.feature-box-fade-in-text {
+  transition: transform 3s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0.1; /* Start with 30% opacity */
+  transform: translateY(15px); /* Start with a slight downward position */
+  will-change: transform, opacity;
+
+}
+.fade-in-up-text {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move up 5px */
+}
+
+

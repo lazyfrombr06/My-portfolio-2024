@@ -29,12 +29,23 @@ import frontendlogo from "../Media/Frontendlogo.webp";
 import toolsLogo from "../Media/feature__tools.webp";
 import backendlogo from "../Media/backend-coding.png";
 import wplogo from "../Media/feature__wp.webp";
-import brajeshtechlogo from '../Media/Brajesh.tech__1_-removebg-preview.png'
+import brajeshtechlogo from "../Media/Brajesh.tech__1_-removebg-preview.png";
 
 import brajeshpic from "../Media/brajeshk.jpg";
 // import FormSubmitThanks from "./FormSubmitThanks";
 
 function Home() {
+  const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [ref3, inView3] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [ref4, inView4] = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  const [ref5, inView5] = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  const [ref6, inView6] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [ref7, inView7] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [ref8, inView8] = useInView({ triggerOnce: true, threshold: 0.3 });
+
   const auth = localStorage.getItem("user");
   const navigate = useNavigate();
   const logout = () => {
@@ -47,7 +58,7 @@ function Home() {
   const [formEmail, setFormEmail] = useState("");
   const [formPhone, setFormPhone] = useState("");
   const [formMsg, setFormMsg] = useState("");
-  const [currntTime, setCurrentTime]= useState("");
+  const [currntTime, setCurrentTime] = useState("");
 
   const [formError, setFormError] = useState("");
 
@@ -60,13 +71,11 @@ function Home() {
       return false;
     }
 
-  // Date and time
-  // const date = new Date();
-  //   const showTime = date.getHours() 
-  //       + ':' + date.getMinutes() 
-  //       + ":" + date.getSeconds();
-
-
+    // Date and time
+    // const date = new Date();
+    //   const showTime = date.getHours()
+    //       + ':' + date.getMinutes()
+    //       + ":" + date.getSeconds();
 
     let result = await fetch("http://brajesh.tech/add-form-data", {
       method: "POST",
@@ -77,11 +86,9 @@ function Home() {
     });
     result = await result.json();
     console.warn(result);
-    navigate("/thanks-form-submit-page")
+    navigate("/thanks-form-submit-page");
   };
 
-
-  
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.1, // Trigger animation when 10% of the box is in view
@@ -194,26 +201,15 @@ function Home() {
         > */}
         <motion.div
           className="skills-section-home-container"
-        
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4 }}
         >
-
-
-
-
-        
-
           <motion.div
-         className="each-box-of-skill"
-          whileTap={{ scale: 1.1 }}
-          animate={{ opacity: 1, y: 0 }}
-         
-        >
-
-
-
+            className="each-box-of-skill"
+            whileTap={{ scale: 1.1 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             <img src={frontendlogo} alt="frontend" />
             <h3 className="heading-of-skill-home">Front-end development</h3>
             <p className="text-of-skill-frontend">
@@ -223,11 +219,10 @@ function Home() {
           </motion.div>
 
           <motion.div
-         className="each-box-of-skill"
-          whileTap={{ scale: 1.1 }}
-          animate={{ opacity: 1, y: 0 }}
-         
-        >
+            className="each-box-of-skill"
+            whileTap={{ scale: 1.1 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             <img src={backendlogo} alt="frontend" /> <br />
             <br />
             <br />
@@ -238,14 +233,13 @@ function Home() {
               deployment expertise, delivering complete and efficient web
               solutions.
             </p>
-            </motion.div>
+          </motion.div>
 
-            <motion.div
-         className="each-box-of-skill"
-          whileTap={{ scale: 1.1 }}
-          animate={{ opacity: 1, y: 0 }}
-         
-        >
+          <motion.div
+            className="each-box-of-skill"
+            whileTap={{ scale: 1.1 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             <img src={wplogo} alt="frontend" />{" "}
             <h3 className="heading-of-skill-home">Wordpress development</h3>
             <p className="text-of-skill-frontend">
@@ -253,21 +247,20 @@ function Home() {
               user-friendly websites, ensuring seamless functionality and smooth
               deployment
             </p>
-            </motion.div>
+          </motion.div>
 
           <motion.div
-         className="each-box-of-skill"
-          whileTap={{ scale: 1.1 }}
-          animate={{ opacity: 1, y: 0 }}
-         
-        >
+            className="each-box-of-skill"
+            whileTap={{ scale: 1.1 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             <img src={toolsLogo} alt="frontend" />{" "}
             <h3 className="heading-of-skill-home">Performance, Tools</h3>
             <p className="text-of-skill-frontend">
               Experienced with Git, GitHub, DigitalOcean, Bootstrap, SSL, and
               many more, ensuring secure, scalable, responsive solutions.
             </p>
-            </motion.div>
+          </motion.div>
         </motion.div>
         <br />
         <br />
@@ -281,20 +274,152 @@ function Home() {
       <section id="projects" className="project-of-mine-container">
         <h1 className="project-heading-1">My Works</h1>
 
-        <motion.div
+        {/* <motion.div
           className="project-container-each"
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.9 }}
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 5 }}
+        > */}
+
+        {/* <motion.div
+          ref={ref1}
+          className={`feature-box project-container-each ${
+            inView1 ? "slide-in" : ""
+          }`}
         >
           <div className="first-box-of-project-for-details">
             <a href="https://dpsru.edu.in" target="_blank" rel="noreferrer">
               <img src={pro1logo} alt="logo" />
             </a>
             <p className="project-description-text-para">
-            DPSRU website developer, overseeing design, deployment, and maintenance with React.js skills for smooth management and debugging.
+              DPSRU website developer, overseeing design, deployment, and
+              maintenance with React.js skills for smooth management and
+              debugging.
+            </p>
+          </div>
+          <div className="second-box-of-project-for-desktop-image">
+            <img
+              src={pro1desktop}
+              alt="Project"
+              className="project-desktop-img"
+            />
+          </div>
+          <div className="third-container-of-project-for-mobile-view">
+            <img src={pro1mobile} alt="project" className="project-phone-img" />
+          </div>
+        </motion.div> */}
+
+        {/* <motion.div
+          className="project-container-each"
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 6 }}
+        > */}
+
+        {/* <motion.div
+          ref={ref2}
+          className={`feature-box-left project-container-each ${
+            inView2 ? "slide-in-left" : ""
+          }`}
+        >
+          <div className="first-box-of-project-for-details">
+            <a
+              href="https://rakeshmotion.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={pro2logo} alt="logo" />
+            </a>
+            <p className="project-description-text-para">
+              rakeshmotion.netlify.app creator, managing design, deployment, and
+              upkeep, using React.js for seamless performance and
+              troubleshooting.
+            </p>
+          </div>
+          <div className="second-box-of-project-for-desktop-image">
+            <img
+              src={pro2desktop}
+              alt="Project"
+              className="project-desktop-img"
+            />
+          </div>
+          <div className="third-container-of-project-for-mobile-view">
+            <img src={pro2mobile} alt="project" className="project-phone-img" />
+          </div>
+        </motion.div> */}
+
+        {/* <motion.div
+          className="project-container-each"
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 7 }}
+        > */}
+        {/* <motion.div
+          ref={ref3}
+          className={`feature-box project-container-each ${
+            inView3 ? "slide-in" : ""
+          }`}
+        >
+          <div className="first-box-of-project-for-details">
+            <a
+              href="https://rahulmotion.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={pro3logo} alt="logo" />
+            </a>
+            <p className="project-description-text-para">
+              rahulmotion.netlify.app developer, handling design, deployment,
+              and maintenance with expertise in React.js for efficient site
+              handling and issue fixing.
+            </p>
+          </div>
+          <div className="second-box-of-project-for-desktop-image">
+            <img
+              src={pro3desktop}
+              alt="Project"
+              className="project-desktop-img"
+            />
+          </div>
+          <div className="third-container-of-project-for-mobile-view">
+            <img src={pro3mobile} alt="project" className="project-phone-img" />
+          </div>
+        </motion.div> */}
+
+        {/* <motion.div
+          className="project-container-each"
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 8 }}
+        > */}
+  
+
+{/* Upper comment lines are old design and there is 2 comment like first motion.div is old style and second motion.div is fro sliding effect with ref  */}
+
+        {/* trying new style project */}
+
+        <motion.div
+          ref={ref1}
+          className={`feature-box project-container-each ${
+            inView1 ? "slide-in" : ""
+          }`}
+        >
+          <div className="first-box-of-project-for-details">
+            <a href="https://dpsru.edu.in" target="_blank" rel="noreferrer">
+              <img src={pro1logo} alt="logo" />
+            </a>
+            <p className="project-description-text-para">
+              DPSRU website developer, overseeing design, deployment, and
+              maintenance with React.js skills for smooth management and
+              debugging.
             </p>
           </div>
           <div className="second-box-of-project-for-desktop-image">
@@ -310,12 +435,10 @@ function Home() {
         </motion.div>
 
         <motion.div
-          className="project-container-each"
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 6 }}
+          ref={ref2}
+          className={`feature-box-left project-container-each ${
+            inView2 ? "slide-in-left" : ""
+          }`}
         >
           <div className="first-box-of-project-for-details">
             <a
@@ -326,8 +449,9 @@ function Home() {
               <img src={pro2logo} alt="logo" />
             </a>
             <p className="project-description-text-para">
-         
-              rakeshmotion.netlify.app creator, managing design, deployment, and upkeep, using React.js for seamless performance and troubleshooting.
+              rakeshmotion.netlify.app creator, managing design, deployment, and
+              upkeep, using React.js for seamless performance and
+              troubleshooting.
             </p>
           </div>
           <div className="second-box-of-project-for-desktop-image">
@@ -341,14 +465,11 @@ function Home() {
             <img src={pro2mobile} alt="project" className="project-phone-img" />
           </div>
         </motion.div>
-
         <motion.div
-          className="project-container-each"
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 7 }}
+          ref={ref3}
+          className={`feature-box project-container-each ${
+            inView3 ? "slide-in" : ""
+          }`}
         >
           <div className="first-box-of-project-for-details">
             <a
@@ -359,7 +480,9 @@ function Home() {
               <img src={pro3logo} alt="logo" />
             </a>
             <p className="project-description-text-para">
-            rahulmotion.netlify.app developer, handling design, deployment, and maintenance with expertise in React.js for efficient site handling and issue fixing.
+              rahulmotion.netlify.app developer, handling design, deployment,
+              and maintenance with expertise in React.js for efficient site
+              handling and issue fixing.
             </p>
           </div>
           <div className="second-box-of-project-for-desktop-image">
@@ -374,12 +497,10 @@ function Home() {
           </div>
         </motion.div>
         <motion.div
-          className="project-container-each"
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 8 }}
+          ref={ref4}
+          className={`feature-box-left project-container-each ${
+            inView4 ? "slide-in-left" : ""
+          }`}
         >
           <div className="first-box-of-project-for-details">
             <a
@@ -390,7 +511,9 @@ function Home() {
               <img src={pro4logo} alt="logo" />
             </a>
             <p className="project-description-text-para">
-            avcomnetwork.com developer, responsible for design, deployment, and site upkeep, leveraging React.js for optimal management and debugging.
+              avcomnetwork.com developer, responsible for design, deployment,
+              and site upkeep, leveraging React.js for optimal management and
+              debugging.
             </p>
           </div>
           <div className="second-box-of-project-for-desktop-image">
@@ -407,24 +530,50 @@ function Home() {
       </section>
 
       {/* Project work  */}
-
-      <section id="skills" className="skills">
-        <h2>My Skills</h2>
-        <div className="skills-container">
-          <div className="skill">
-            <h3>Frontend</h3>
-            <p>React.js, HTML, CSS, JavaScript</p>
+      <motion.div
+        ref={ref5}
+        className={`feature-box-fade-in ${inView5 ? "fade-in-up" : ""}`}
+      >
+        <section id="skills" className="skills">
+          <h2>My Skills</h2>
+          <div className="skills-container">
+            <div className="skill">
+              <h3>Frontend</h3>
+              <p
+                ref={ref6}
+                className={`feature-box-fade-in-text ${
+                  inView5 ? "fade-in-up-text" : ""
+                }`}
+              >
+                React.js, HTML, CSS, JavaScript
+              </p>
+            </div>
+            <div className="skill">
+              <h3>Backend</h3>
+              <p
+                ref={ref7}
+                className={`feature-box-fade-in-text ${
+                  inView5 ? "fade-in-up-text" : ""
+                }`}
+              >
+                Node.js, Express.js, MongoDB
+              </p>
+            </div>
+            <div className="skill">
+              <h3>Tools</h3>
+              <p
+                ref={ref8}
+                className={`feature-box-fade-in-text ${
+                  inView5 ? "fade-in-up-text" : ""
+                }`}
+              >
+                {" "}
+                Git, DigitalOcean, Bootstrap, SSL
+              </p>
+            </div>
           </div>
-          <div className="skill">
-            <h3>Backend</h3>
-            <p>Node.js, Express.js, MongoDB</p>
-          </div>
-          <div className="skill">
-            <h3>Tools</h3>
-            <p> Git, DigitalOcean, Bootstrap, SSL</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </motion.div>
 
       {/* <section id="projects" className="projects">
         <h2>Projects</h2>
@@ -443,8 +592,8 @@ function Home() {
         <div className="contact-me-box">
           <div className="wrapper">
             <form
-            action="https://formsubmit.co/brajeshkumarthakur1@gmail.com"
-            method="POST"
+              action="https://formsubmit.co/brajeshkumarthakur1@gmail.com"
+              method="POST"
             >
               <div className="input-box">
                 <input
@@ -510,8 +659,12 @@ function Home() {
                 )}
               </div>
 
-              <input type="hidden" name="_next" value="https://brajesh.tech/thanks-form-submit-page" />
-              <input type="hidden" name="_captcha" value="false"/>
+              <input
+                type="hidden"
+                name="_next"
+                value="https://brajesh.tech/thanks-form-submit-page"
+              />
+              <input type="hidden" name="_captcha" value="false" />
               {/* <input
                 type="hidden"
                 name="_next"
